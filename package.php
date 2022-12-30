@@ -36,9 +36,19 @@ $username=$_SESSION['logged'];
       <!-- fonts -->
       <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Righteous&display=swap" rel="stylesheet">
       <!-- owl stylesheets --> 
+      <link rel="stylesheet" href="css/packagestyle.css">
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   
+   
+      <<style>
+    
+img {
+    max-width: 100%;
+    height: 150px !important;
+      }
+      </style>
    </head>
    <body>
       <!-- header section start -->
@@ -137,16 +147,20 @@ $username=$_SESSION['logged'];
             <br>
             <br>
             <center>
-                <table width="800" border="1">
-                    <tr>
-                        <td align="center">Package Name</td>
-                        <td align="center">Description</td>
-                        <td align="center">Rate</td>
-                        <td align="center">Image</td>
-                        <td align="center">Action</td>
-                    </tr>    
 
-                    <?php
+            <div class="container p-3">
+  <h2>Packages </h2>
+  <ul class="responsive-table">
+    <li class="table-header">
+       <div class="col col-3">Image</div>
+      <div class="col col-1">Package Name</div>
+      <div class="col col-2">Description</div>
+      <div class="col col-1">Rate</div>
+      <div class="col col-2">Details</div>
+      <div class="col col-1">Action</div>
+      <div class="col col-2"></div>
+    </li>
+    <?php
                     while($row=mysqli_fetch_array($res))
                     {
                         
@@ -154,25 +168,29 @@ $username=$_SESSION['logged'];
                         $des=$row['pdes'];
                         $rate=$row['prate'];
                         $image=$row['image'];
+                        $details=$row['pdate'];
+                        $pdf=$row['pseat'];
                         $path="uploads/".$image;
+                        $pdfpath="uploads/pdf/".$pdf;
+                        
                         
                     
                     ?>
+    <li class="table-row p-3">
+       <div class="col col-4" data-label="Payment Status"><img src="<?php echo $path;?>" height=400px width="300px"></div>
+      <div class="col col-1" data-label="Job Id"><?php echo $name;?></div>
+      <div class="col col-2" data-label="Customer Name"><?php echo $des;?></div>
+      <div class="col col-1" data-label="Amount"><?php echo $rate ?></div>
+      <div class="col col-2" data-label="Payment Status"><?php echo $details ?></div>
+      <div class="col col-1" data-label="Payment Status"><a href="<?php echo$pdfpath ?>"> View Details</div></a>
+      <div class="col col-2" data-label="Payment Status"> <button class="btn btn-info">Book Now</button> </div>
+    </li>
+    <?php
 
-                    <tr>
-                        
-                        <td><?php echo $name;?></td>
-                        <td><?php echo $des;?></td>
-                        <td><?php echo $rate;?></td>
-                        <td><img src="<?php echo $path;?>" height="400" width="300"></td>
-                        <td> <center><a href="adminhome.php?pname=<?php echo $name;?>">View Details</a></center></td>
-                    </tr>
-                    </center>  
-                    
-                    <?php
+}
 
-                    }
+?>
+  </ul>
+</div>
 
-                    ?>
-                    </table>
-                </center>
+   </center>

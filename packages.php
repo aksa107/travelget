@@ -6,7 +6,7 @@ $username=$_SESSION['logged'];
 <?php
 include 'connect.php';
 
-$query="select * from packages";
+$query="select * from packages ";
 $res=mysqli_query($link,$query)
 
 ?>
@@ -61,6 +61,7 @@ while($row=mysqli_fetch_assoc($res))
     $d=$row['prate'];
     $e=$row['pseat'];
     $f=$row['image'];
+    
     $path="uploads/".$f;
 
 ?>
