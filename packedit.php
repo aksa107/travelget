@@ -31,15 +31,16 @@ if($row=mysqli_fetch_array($res))
     <link rel="stylesheet" href="css/lstyle.css">
 </head>
 <body></body>
-
+<?php ?>
         <!-- Sign up form -->
         <section class="signup">
             <div class="container">
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Package Edit</h2>
-                        <form method="get" class="register" action="packeditprocess.php?id=<?php echo $id;?>">
+                        <form method="POST" class="register" action="packeditprocess.php"  enctype="multipart/form-data">
                             <div class="form-group">
+                            <input type="hidden" name="id" id="name"value="<?php echo$id;?>" >
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="pname" id="pname" value="<?php echo $name;?>">
                             </div>
@@ -54,6 +55,10 @@ if($row=mysqli_fetch_array($res))
                             <div class="form-group">
                                 <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
                                 <input type="file" name="image" id="image">
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <input type="file" name="pdf" id="pdf">
                             </div>
                            
                             <div class="form-group form-button">

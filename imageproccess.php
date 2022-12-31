@@ -25,7 +25,7 @@ if (move_uploaded_file($tempName,$folder.$originalImgName)) {
     $res=mysqli_query($link,$query) or die(mysqli_error($link));
        if($res) {
 
-        //    echo $query;
+        //    echo $tempName;
         ?>
         <script language="javascript">alert('upload success');window.location.replace('adminhome.php');</script>
         <?php
