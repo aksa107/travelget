@@ -29,7 +29,7 @@ if($row=mysqli_fetch_array($res))
     <link rel="stylesheet" href="css/lstyle.css">
 </head>
 <body></body>
-
+<?php include 'adminnavbar.php';?>
         <!-- Sign up form -->
         <section class="signup">
             <div class="container">

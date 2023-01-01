@@ -73,7 +73,7 @@
                      <li><a href="userbookings.php">My Bookings</a></li>
                      <li><a href="contact.php">Contact us</a></li>
                      <li><a href="profile.php">Profile</a></li>
-                     <li><a href="logout.html">Logout</a></li>
+                     <li><a href="logout.php">Logout</a></li>
                   </ul>
                </div>
             </div>

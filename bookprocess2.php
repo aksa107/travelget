@@ -28,14 +28,14 @@ if($res)
      
     ?>
     
-    <script language="javascript">alert('Booking success');window.location.replace('home.php');</script>
+    <script language="javascript">window.location.replace('card.php');</script>
     <?php
 }
 
 else
 { echo $query;
     ?>
-     <script language="javascript">alert('Booking failed');window.location.replace('home.php');</script>
+     <script language="javascript">window.location.replace('home.php');</script>
     <?php
 
 
