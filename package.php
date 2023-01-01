@@ -74,10 +74,11 @@ img {
                </div>
   <ul class="responsive-table">
     <li class="table-header">
-       <div class="col col-3">Image</div>
+       <div class="col col-2">Image</div>
       <div class="col col-1">Package Name</div>
       <div class="col col-2">Description</div>
-      <div class="col col-1">Rate</div>
+      <div class="col col-1">Ecnomy Rate</div>
+      <div class="col col-1">Luxury Rate</div>
       <div class="col col-2">Details</div>
       <div class="col col-1">Action</div>
       <div class="col col-2"></div>
@@ -89,6 +90,7 @@ img {
                         $name=$row['pname'];
                         $des=$row['pdes'];
                         $rate=$row['prate'];
+                        $lux=$row['pluxury'];
                         $image=$row['image'];
                         $details=$row['pdate'];
                         $pdf=$row['pseat'];
@@ -99,14 +101,14 @@ img {
                     
                     ?>
     <li class="table-row p-3">
-       <div class="col col-4" data-label="Payment Status"><img src="<?php echo $path;?>" height=400px width="300px"></div>
+       <div class="col col-2" data-label="Payment Status"><img src="<?php echo $path;?>" height=400px width="300px"></div>
       <div class="col col-1" data-label="Job Id"><?php echo $name;?></div>
       <div class="col col-2" data-label="Customer Name"><?php echo $des;?></div>
       <div class="col col-1" data-label="Amount"><?php echo $rate ?></div>
+      <div class="col col-1" data-label="Amount"><?php echo $lux ?></div>
       <div class="col col-2" data-label="Payment Status"><?php echo $details ?></div>
       <div class="col col-1" data-label="Payment Status"><a href="<?php echo$pdfpath ?>"> View Details</div></a>
-      <div class="col col-2" data-label="Payment Status"> <button class="btn btn-info">Book Now</button> </div>
-    </li>
+      <div class="col col-2" data-label="Payment Status"><a href="./booking/index.php?package=<?php echo $name;?>&&username=<?php echo $username;?>" > <button class="btn btn-info">Book Now</button></a>
     <?php
 
 }
