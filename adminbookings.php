@@ -85,7 +85,8 @@ body
   
  include 'connect.php';
   $status="pending";
- $query="select * from bookings where status='$status'";
+  $query="select *, packages.pid,packages.prate,packages.pluxury from bookings INNER JOIN packages ON bookings.pid=packages.pid  where bookings.status='$status'";
+
   
  $res=mysqli_query($link,$query);
   
@@ -96,11 +97,12 @@ body
   $id=$row['id'];
   $a=$row['username'];
   
-  $b=$row['place'];
+  $b=$row['package'];
   
-  $c=$row['rate'];
+  $mode=$row['mode'];
+  $mode=="luxury"?$c=$row['pluxury']:$c=$row['prate'];
   
-  $d=$row['days'];
+  $d=$row['date'];
   
   $e=$row['status'];
  

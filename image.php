@@ -41,8 +41,12 @@
                                 <input type="text" name="pdes" id="pdes" placeholder=""/>
                             </div>
                             <div class="form-group">
-                            <label for="prate" class="text-muted"><i class="zmdi zmdi-lock-outline me-3"></i> Price</label>
-                                <input type="text" name="prate" id="prate" placeholder=""/>
+                            <label for="ecnomy" class="text-muted"><i class="zmdi zmdi-lock-outline me-3"></i>ecnomy Price</label>
+                                <input type="text" name="ecnomy" id="ecnomy" placeholder=""/>
+                            </div>
+                            <div class="form-group">
+                            <label for="luxury" class="text-muted"><i class="zmdi zmdi-lock-outline me-3"></i>Luxury Price</label>
+                                <input type="text" name="luxury" id="luxury" placeholder=""/>
                             </div>
                             <div class="form-group">
                             <label for="pdate" class="text-muted"><i class="zmdi zmdi-lock-outline me-3"></i> Details</label>

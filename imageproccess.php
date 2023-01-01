@@ -3,8 +3,9 @@ include "connect.php";
 
 $a=$_POST['pname'];
 $b=$_POST['pdes'];
-$c=$_POST['prate'];
+$c=$_POST['ecnomy'];
 $d=$_POST['pdetails'];
+$e=$_POST['luxury'];
 
 
 
@@ -21,7 +22,7 @@ $extension = pathinfo($_FILES["image"]["name"], PATHINFO_EXTENSION);
 {
 if (move_uploaded_file($tempName,$folder.$originalImgName)) {
     // code...
-    $query="insert into packages (pname,pdes,prate,pdate,pseat,image) values('$a','$b','$c','$d','$file_name','$originalImgName')";
+    $query="insert into packages (pname,pdes,prate,pluxury,pdate,pseat,image) values('$a','$b','$c','$e','$d','$file_name','$originalImgName')";
     $res=mysqli_query($link,$query) or die(mysqli_error($link));
        if($res) {
 

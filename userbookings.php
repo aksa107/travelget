@@ -23,8 +23,9 @@ $username=$_SESSION['logged'];
  <ul class="responsive-table">
      <li class="table-header">
         <div class="col col-2">Username</div>
-       <div class="col col-2">Place</div>
-       <div class="col col-2">Rate</div>
+       <div class="col col-2">Package</div>
+       <div class="col col-1">Mode</div>
+       <div class="col col-1">Rate</div>
        <div class="col col-2">Date</div>
        <div class="col col-2">Status</div>
        <div class="col col-2">Action</div>
@@ -36,10 +37,10 @@ $username=$_SESSION['logged'];
  
   
  <?php
-  
  include 'connect.php';
-  
- $query="select * from bookings where username='$username'";
+         
+ $query="select *, packages.pid,packages.prate,packages.pluxury from bookings INNER JOIN packages ON bookings.pid=packages.pid where bookings.username='$username'";
+//  echo $query;• 
   
  $res=mysqli_query($link,$query);
   
@@ -50,12 +51,14 @@ $username=$_SESSION['logged'];
      $id=$row['id'];
      $a=$row['username'];
      
-     $b=$row['place'];
+     $b=$row['package'];
+     $mode=$row['mode'];
+    //  echo $mode;
+    //  $r=$row['rate']
+     $d=$row['date'];
      
-     $c=$row['rate'];
-     
-     $d=$row['days'];
-     
+$mode=="luxury"?$rate=$row['pluxury']:$rate=$row['prate'];
+// echo $rate;   
      $e=$row['status'];
     
     
@@ -64,7 +67,8 @@ $username=$_SESSION['logged'];
  <li class="table-row p-3">
  <div class="col col-2" name=""><?php echo $a;?></div>
  <div class="col col-2" name="Customer Name"><?php echo $b;?></div>
- <div class="col col-2" name="Amount"><?php echo $c ?></div>
+ <div class="col col-1" name="mode"><?php echo $mode ?></div>
+ <div class="col col-1" name="Amount"><?php echo $rate; ?></div>
  <div class="col col-2" name="details"><?php echo $d ?></div>
  <div class="col col-2" name="status"> <?php echo $e ?></div>
  <div class="col col-2" name="cancel"><button class="btn btn-info"><a href="cancelprocess.php?id=<?php echo $id;?>" class="text-white ">Cancel</a></button></div>

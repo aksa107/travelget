@@ -30,8 +30,8 @@
  <?php
   
   include 'connect.php';
-  
-  $query="select * from bookings";
+  $query="select *, packages.pid,packages.prate,packages.pluxury from bookings INNER JOIN packages ON bookings.pid=packages.pid ";
+// echo $query;
    
   $res=mysqli_query($link,$query);
   
@@ -42,11 +42,12 @@
 
    $a=$row['username'];
    
-   $b=$row['place'];
+   $b=$row['package'];
    
-   $c=$row['rate'];
+   $mode=$row['mode'];
+   $mode=="luxury"?$c=$row['pluxury']:$c=$row['prate'];
    
-   $d=$row['days'];
+   $d=$row['date'];
    
    $e=$row['status'];
   
