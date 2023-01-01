@@ -77,7 +77,7 @@ $username=$_SESSION['logged'];
 
 <div class="container">
 
-<h2>Tourist List</h2>
+<h2 class="mb-4 mt-5">Tourist List</h2>
 <ul class="responsive-table">
      <li class="table-header">
         <div class="col col-2">name</div>

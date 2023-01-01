@@ -8,6 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> PENDING REQUEST</title>
+    
+    <link rel="stylesheet" href="css/packagestyle.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
 </head>
 <style>
 html{
@@ -61,31 +65,19 @@ body {
     
 <div class="container">
  
- <h2>list my bookings </h2>
-  
- <table border="2">
-  
-  
-  <tr>
-  
-  <td> Username</td>
-  
-  <td> Place</td>
-  
-  <td> Rate</td>
-  
+ <h2 class="mb-4 mt-5">Pending Request  </h2>
+ <ul class="responsive-table">
+     <li class="table-header">
+        <div class="col col-2">Username</div>
+       <div class="col col-2">Place</div>
+       <div class="col col-1">Rate</div>
+       <div class="col col-2">Date</div>
+       <div class="col col-1">Status</div>
+       <div class="col col-1">Approve</div>
+       <div class="col col-1">Reject</div>
+     </li>
  
-  
-  <td> Date</td>
-  
-  <td> Status</td>
-  
-  <td> Approve</td>
-   
-  <td> Reject</td>
-  
- </tr>
-  
+ 
  
   
  <?php
@@ -113,42 +105,19 @@ body {
  
   
   ?>
-  
-  <tr>
-  
-  <td><?php echo $a;?></td>
-  
-  <td><?php echo $b;?></td>
-  
-  <td><?php echo $c;?></td>
-  
-  <td><?php echo $d;?></td>
-  
-  <td><?php echo $e;?></td>
-  
-  <td><a href="approveprocess.php?id=<?php echo $id;?>">Approve</a></td>
-  
-  
-  <td><a href="cancelprocess.php?id=<?php echo $id;?>">Reject</a></td>
-  
-  
-  
+ <li class="table-row p-3">
+ <div class="col col-2" name=""><?php echo $a;?></div>
+ <div class="col col-2" name="Customer Name"><?php echo $b;?></div>
+ <div class="col col-1" name="Amount"><?php echo $c ?></div>
+ <div class="col col-2" name="details"><?php echo $d ?></div>
+ <div class="col col-1" name="status"> <?php echo $e ?></div>
+ <div class="col col-1" name="cancel"><button class="btn btn-success"><a href="approveprocess.php?id=<?php echo $id;?>" class="text-white ">Approve</a></button></div>
+ <div class="col col-1" name="cancel"><button class="btn btn-danger"><a href="cancelprocess.php?id=<?php echo $id;?>" class="text-white ">Reject</a></button></div>
+ </li>
  
+ <?php }?>
   
- </tr>
-  
-  
- <?php
-  
-  
- }
-  
-  
- ?>
-  
-  
- </table>
-  
+
   
  </div>
   
