@@ -91,7 +91,7 @@ $username=$_SESSION['logged'];
                <div class="logo"><a href="home.php"><img src="images/logo.png"></a></div>
                <div class="menu_main">
                   <ul>
-                     <li class="active"><a href="home.php">Home</a></li>
+                     <li class="active"><a href="adminhome.php">Home</a></li>
                      <li><a href="image.php">packages</a></li>
                      <li><a href="adminexplore.php">Explore</a></li>
                      
