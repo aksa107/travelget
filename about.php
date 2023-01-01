@@ -42,7 +42,9 @@ $username=$_SESSION['logged'];
    <body>
       <!-- header section start -->
 
+
       <?php include 'usernavbar.php';?>
+
       <!-- header section end -->
       <!-- about section start -->
       <div class="about_section layout_padding">
