@@ -94,15 +94,12 @@ $username=$_SESSION['logged'];
             <p class="services_text">“A state with lots of coconut trees and the greenery in totality is always soothing to the senses. As you will be approaching, you will be already excited for Kerala.”</p>
             <div class="services_section_2">
                <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                      <div><img src="images/img-1.png" class="services_img"></div>
-                     <div class="btn_main"><a href="Places.php">Places</a></div>
+                     <div class="btn_main"><a href="Places.html">Places</a></div>
                   </div>
-                  <div class="col-md-4">
-                     <div><img src="images/img-2.png" class="services_img"></div>
-                     <div class="btn_main active"><a href="#">Hotels</a></div>
-                  </div>
-                  <div class="col-md-4">
+                
+                  <div class="col-md-6">
                      <div><img src="images/img-3.png" class="services_img"></div>
                      <div class="btn_main"><a href="packages.php">Packages</a></div>
                   </div>
