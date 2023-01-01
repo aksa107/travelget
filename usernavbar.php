@@ -87,8 +87,9 @@
                   <ul>
                      <li class="active"><a href="home.php">Home</a></li>
                      <li><a href="about.php">About</a></li>
-                     <li><a href="explore.php">Explore</a></li>  <li><a href="userbookings.php">My Bookings</a></li>
-                     <li><a href="contact.html">Contact us</a></li>
+                     <li><a href="explore.php">Explore</a></li>  
+                     <li><a href="userbookings.php">My Bookings</a></li>
+                     <li><a href="contact.php">Contact us</a></li>
                      <li><a href="profile.php">Profile</a></li>
                      <li><a href="logout.php">Logout</a></li>
                   </ul>

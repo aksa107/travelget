@@ -55,14 +55,15 @@ label
 
     <style>
     
-body {
+body
+ {
   background-image: url('foot.jpg');
 }
 </style>
 
 
 <body>
-    
+<?php include 'adminnavbar.php';?>
 <div class="container">
  
  <h2 class="mb-4 mt-5">Pending Request  </h2>
