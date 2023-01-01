@@ -1,90 +1,82 @@
+
+
 <?php
 session_start();
 $username=$_SESSION['logged'];
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/packagestyle.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
+</head>
+<body>
+    
 <div class="container">
  
-<h2>list my bookings </h2>
- 
-<table border="2">
- 
- 
- <tr>
- 
- <td> Username</td>
- 
- <td> Place</td>
- 
- <td> Rate</td>
- 
-
- 
- <td> Date</td>
- 
- <td> Status</td>
- 
- <td> Cancel</td>
+ <h2>list my bookings </h2>
+ <ul class="responsive-table">
+     <li class="table-header">
+        <div class="col col-2">Username</div>
+       <div class="col col-2">Place</div>
+       <div class="col col-2">Rate</div>
+       <div class="col col-2">Date</div>
+       <div class="col col-2">Status</div>
+       <div class="col col-2">Action</div>
+     </li>
  
  
-</tr>
  
-
+  
  
-<?php
+  
+ <?php
+  
+ include 'connect.php';
+  
+ $query="select * from bookings where username='$username'";
+  
+ $res=mysqli_query($link,$query);
+  
  
-include 'connect.php';
- 
-$query="select * from bookings where username='$username'";
- 
-$res=mysqli_query($link,$query);
- 
-while($row=mysqli_fetch_array($res))
- 
-{
- 
- $id=$row['id'];
- $a=$row['username'];
- 
- $b=$row['place'];
- 
- $c=$row['rate'];
- 
- $d=$row['days'];
- 
- $e=$row['status'];
-
+ while($row=mysqli_fetch_array($res))
+ {
+     
+     $id=$row['id'];
+     $a=$row['username'];
+     
+     $b=$row['place'];
+     
+     $c=$row['rate'];
+     
+     $d=$row['days'];
+     
+     $e=$row['status'];
+    
+    
  
  ?>
+ <li class="table-row p-3">
+ <div class="col col-2" name=""><?php echo $a;?></div>
+ <div class="col col-2" name="Customer Name"><?php echo $b;?></div>
+ <div class="col col-2" name="Amount"><?php echo $c ?></div>
+ <div class="col col-2" name="details"><?php echo $d ?></div>
+ <div class="col col-2" name="status"> <?php echo $e ?></div>
+ <div class="col col-2" name="cancel"><button class="btn btn-info"><a href="cancelprocess.php?id=<?php echo $id;?>" class="text-white ">Cancel</a></button></div>
+ </li>
  
- <tr>
- 
- <td><?php echo $a;?></td>
- 
- <td><?php echo $b;?></td>
- 
- <td><?php echo $c;?></td>
- 
- <td><?php echo $d;?></td>
- 
- <td><?php echo $e;?></td>
- 
- <td><a href="cancelprocess.php?id=<?php echo $id;?>">Cancel</a></td>
- 
- </tr>
- 
- 
-<?php
- 
- 
-}
- 
- 
-?>
- 
- 
-</table>
- 
- 
-</div>
- 
+ <?php }?>
+  
+  
+ </table>
+  
+  
+ </div>
+  
+</body>
+</html>

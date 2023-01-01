@@ -35,6 +35,9 @@ $username=$_SESSION['logged'];
       <!-- fonts -->
       <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Righteous&display=swap" rel="stylesheet">
       <!-- owl stylesheets --> 
+      
+    <link rel="stylesheet" href="css/packagestyle.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
@@ -75,19 +78,21 @@ $username=$_SESSION['logged'];
 <div class="container">
 
 <h2>Tourist List</h2>
-<table border="4px" width="70">
-
-<tr>
-
-<td>Name</td>
-<td>Email</td>
-<td>Phone</td>
-<td>Password</td>
-
-</tr>
-
-
-
+<ul class="responsive-table">
+     <li class="table-header">
+        <div class="col col-2">name</div>
+       <div class="col col-2">Email</div>
+       <div class="col col-2">Phone</div>
+     
+     
+       <div class="col col-2">Action</div>
+     </li>
+ 
+ 
+ 
+  
+ 
+  
 <?php
 include 'connect.php';
 $query="select * from signup";
@@ -101,25 +106,15 @@ $phone=$row['phone'];
 $password=$row['password'];
 ?>
 
-<tr>
-  <td><?php echo $fname;?></td>
-  <td><?php echo $email;?></td>
-<td><?php echo $phone;?></td>
-<td><?php echo $password;?></td>
-
-  <td><a href="deleteprocess.php?name=<?php echo $fname;?>">Delete</a>
-</tr>
-
-
-<?php
-
-}
-
-
-?>
-
-</table>    
-
+ <li class="table-row p-3">
+ <div class="col col-2" name=""><?php echo $fname;?></div>
+ <div class="col col-2" name="Customer Name"><?php echo $email;?></div>
+ <div class="col col-2" name="Amount"><?php echo $phone ?></div>
+ <div class="col col-2" name="cancel"><button class="btn btn-danger"><a href="deleteprocess.php?name=<?php echo $fname;?>" class="text-white ">Delete</a></button></div>
+ </li>
+ 
+ <?php }?>
+  
 
 </div>
 <div class="footer_section layout_padding">
