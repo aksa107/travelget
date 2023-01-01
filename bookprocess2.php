@@ -1,6 +1,7 @@
 <?php
 include 'connect.php';
 $a=$_POST['package'];
+$pid=$_POST['pid'];
 $b=$_POST['phone_number'];
 $c=$_POST['address'];
 $d=$_POST['date'];
@@ -19,11 +20,11 @@ else if ($radioVal == "luxury")
 {
     $mode="luxury";
 }
-$query="insert into bookings(username,package,phone,address,email,men,women,date,mode,additional)values('$f','$a','$b','$c','$e','$men','$women','$d','$mode','$g')";
+$query="insert into bookings(username,pid,package,phone,address,email,men,women,date,mode,additional)values('$f',$pid,'$a','$b','$c','$e','$men','$women','$d','$mode','$g')";
 $res=mysqli_query($link,$query);
 if($res)
 {
-     echo $a ."<br>".$b ."<br>".$c ."<br>".$d ."<br>".$e ."<br>".$f ."<br>".$g ."<br>".$women ."<br>".$men ."<br>".$mode ."<br>";
+    //  echo $pid ."<br>".$b ."<br>".$c ."<br>".$d ."<br>".$e ."<br>".$f ."<br>".$g ."<br>".$women ."<br>".$men ."<br>".$mode ."<br>";
      
     ?>
     
@@ -34,7 +35,7 @@ if($res)
 else
 { echo $query;
     ?>
-     <!-- <script language="javascript">alert('Booking failed');window.location.replace('home.php');</script> -->
+     <script language="javascript">alert('Booking failed');window.location.replace('home.php');</script>
     <?php
 
 

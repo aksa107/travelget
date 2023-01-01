@@ -4,7 +4,20 @@ $username=$_GET['username'];
 $package=$_GET['package'];
 
 $date = date('Y-m-d');
-echo $date
+echo $date;
+include '../connect.php';
+
+$query="select pid from packages where pname='$package' ";
+$res=mysqli_query($link,$query);
+
+$row=mysqli_fetch_row($res);
+
+$id=$row[0]
+
+   
+   
+   
+
 ?>
 
 <!DOCTYPE html>
@@ -48,6 +61,7 @@ echo $date
                         <div class="form-row">
                             <div class="form-group">
                                 <div class="form-input">
+                                    <input type="hidden" name="pid" value="<?php echo $id;?>">
                                     <label for="package" class="required">Package name</label>
                                     <input type="text" name="package" readonly id="package" value="<?php echo $package?>" />
                                 </div>
@@ -117,7 +131,7 @@ echo $date
                                     <textarea class="form-control " name="additional" id="additional" cols="10" rows="5"></textarea>
                                     
                                 </div>
-                         
+                       
                         
                             </div>
                         </div>

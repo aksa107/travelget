@@ -7,7 +7,7 @@ $res=mysqli_query($link,$query);
 if($res)
 {
     ?>
-    <script language="javascript">alert('cancellation success');window.location.replace('home.php');</script>
+    <script language="javascript">alert('cancellation success');window.location.replace('adminhome.php');</script>
     <?php
 }
 
