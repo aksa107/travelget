@@ -2,7 +2,8 @@
 <html lang="en">
 <head><?php
 session_start();
-$username=$_SESSION['logged'];
+// $username=$_SESSION['logged'];
+echo $username;
 include 'connect.php';
 $query="select * from admin where aname='$username'";
 $res=mysqli_query($link,$query);

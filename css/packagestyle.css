@@ -44,8 +44,14 @@
   }
   .responsive-table .col-4 {
     flex-basis: 25%;
+  } 
+  .responsive-table li:hover:not(.table-header){
+    color: #ffffff;
+   transform: translate(10px);
+    background-color: #293030 !important;
   }
   @media all and (max-width: 767px) {
+ 
     .responsive-table .table-header {
       display: none;
     }

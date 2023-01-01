@@ -5,6 +5,7 @@ $username=$_SESSION['logged'];
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -16,7 +17,7 @@ $username=$_SESSION['logged'];
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>About</title>
+      <title>Services</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -35,20 +36,16 @@ $username=$_SESSION['logged'];
       <!-- fonts -->
       <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Righteous&display=swap" rel="stylesheet">
       <!-- owl stylesheets --> 
-      
-    <link rel="stylesheet" href="css/packagestyle.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <style>
+         .services_img{
+            width: 350px!important;
+         }
+      </style>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
-   <style>
-    h2
-    {
-      position: static !important;
-    }
 
-      </style>
    <body>
       <!-- header section start -->
       <div class="header_section">
@@ -61,7 +58,21 @@ $username=$_SESSION['logged'];
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNav">
                      <ul class="navbar-nav">
-                        
+                        <li class="nav-item">
+                           <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link " href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link " href="contact.html">Contact</a>
+                        </li>
                      </ul>
                   </div>
                </nav>
@@ -88,50 +99,37 @@ $username=$_SESSION['logged'];
             </div>
          </div>
       </div>
+      <!-- header section end -->
+      <!-- services section start -->
+      <div class="services_section layout_padding">
+         <div class="container">
+            <h1 class="services_taital">Keep calm and visit Kerala</h1>
+            <p class="services_text">“A state with lots of coconut trees and the greenery in totality is always soothing to the senses. As you will be approaching, you will be already excited for Kerala.”</p>
+            <div class="services_section_2">
+               <div class="row ">
+                  <div class="col-md-6 ">
+                     <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div><img src="images/img-1.png" class="services_img" ></div>
+                        <div class="btn_main"><a href="Places.html">Places</a></div>
+                        
+                     </div>
+                  </div>
+                
+                  <div class="col-md-6">
+                     
+                  <div class="d-flex flex-column justify-content-center align-items-center">
 
-<div class="container">
-
-<h2 class="mb-4 mt-5">Tourist List</h2>
-<ul class="responsive-table">
-     <li class="table-header">
-        <div class="col col-2">name</div>
-       <div class="col col-2">Email</div>
-       <div class="col col-2">Phone</div>
-     
-     
-       <div class="col col-2">Action</div>
-     </li>
- 
- 
- 
-  
- 
-  
-<?php
-include 'connect.php';
-$query="select * from signup";
-$res=mysqli_query($link,$query);
-while($row=mysqli_fetch_array($res))
-{
-
-$fname=$row['name'];
-$email=$row['email'];
-$phone=$row['phone'];
-$password=$row['password'];
-?>
-
- <li class="table-row p-3">
- <div class="col col-2" name=""><?php echo $fname;?></div>
- <div class="col col-2" name="Customer Name"><?php echo $email;?></div>
- <div class="col col-2" name="Amount"><?php echo $phone ?></div>
- <div class="col col-2" name="cancel"><button class="btn btn-danger"><a href="deleteprocess.php?name=<?php echo $fname;?>" class="text-white ">Delete</a></button></div>
- </li>
- 
- <?php }?>
-  
-
-</div>
-<div class="footer_section layout_padding">
+                     <div><img src="images/img-3.png" class="services_img"></div>
+                     <div class="btn_main"><a href="package.php">Packages</a></div>
+                  </div>
+               </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- services section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
          <div class="container">
             <div class="input_btn_main">
                <input type="text" class="mail_text" placeholder="Enter your email" name="Enter your email">

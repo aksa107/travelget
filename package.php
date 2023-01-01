@@ -42,10 +42,13 @@ $username=$_SESSION['logged'];
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    
    
-      <<style>
-    
+      <style>
+    h2
+    {
+      position: static;
+    }
 img {
-    max-width: 100%;
+    width:150px !important;
     height: 150px !important;
       }
       </style>
@@ -89,7 +92,7 @@ img {
                </nav>
             </div>
             <div class="container-fluid">
-               <div class="logo"><a href="home.php"><img src="images/logo.png"></a></div>
+               <div class="logo"><a href="home.php"><img src="images/logo.png" style="height:100% !important"></a></div>
                <div class="menu_main">
                   <ul>
                      <li class="active"><a href="home.php">Home</a></li>
@@ -149,7 +152,10 @@ img {
             <center>
 
             <div class="container p-3">
-  <h2>Packages </h2>
+               <div>
+
+                  <h2  >Packages </h2>
+               </div>
   <ul class="responsive-table">
     <li class="table-header">
        <div class="col col-3">Image</div>
