@@ -19,11 +19,11 @@
         }
         .form-group{
             overflow: initial;
-            margin-bottom:38px;
+            margin-bottom:3rem !important;
         }
     </style>
 </head>
-<body></body>
+<body></body>      <?php include 'adminnavbar.php';?>
 
         <!-- Sign up form -->
         <section class="signup">

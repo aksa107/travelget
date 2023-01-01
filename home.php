@@ -9,6 +9,12 @@ $username=$_SESSION['logged'];
 <!DOCTYPE html>
 <html lang="en">
    <head>
+   <style>
+         .services_img{
+            height: 350px!important;
+            width : 350px!important;
+         }
+      </style> 
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -135,15 +141,23 @@ $username=$_SESSION['logged'];
             <h1 class="services_taital">Keep calm and visit Kerala</h1>
             <p class="services_text">“A state with lots of coconut trees and the greenery in totality is always soothing to the senses. As you will be approaching, you will be already excited for Kerala.”</p>
             <div class="services_section_2">
-               <div class="row">
-                  <div class="col-md-6">
-                     <div><img src="images/img-1.png" class="services_img"></div>
-                     <div class="btn_main"><a href="places.html">Places</a></div>
+            <div class="row ">
+                  <div class="col-md-6 ">
+                     <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div><img src="images/img-1.png" class="services_img" ></div>
+                        <div class="btn_main"><a href="Places.html">Places</a></div>
+                        
+                     </div>
                   </div>
+                
                   <div class="col-md-6">
+                     
+                  <div class="d-flex flex-column justify-content-center align-items-center">
+
                      <div><img src="images/img-3.png" class="services_img"></div>
                      <div class="btn_main"><a href="package.php">Packages</a></div>
                   </div>
+               </div>
                </div>
             </div>
          </div>

@@ -16,7 +16,7 @@ $username=$_SESSION['logged'];
 
 </head>
 <body>
-    
+<?php include 'usernavbar.php';?>
 <div class="container">
  
  <h2 class="mb-4 mt-5">list my bookings </h2>

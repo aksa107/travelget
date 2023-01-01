@@ -54,93 +54,9 @@ img {
       </style>
    </head>
    <body>
+
       <!-- header section start -->
-      <div class="header_section">
-         <div class="header_main">
-            <div class="mobile_menu">
-               <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <div class="logo_mobile"><a href="index.html"><img src="images/logo.png"></aF></div>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                           <a class="nav-link" href="home.php">Home</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="about.php">About</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link " href="blog.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link " href="contact.html">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link " href="profile.php">Profile</a>
-                        </li>
-                        </li> <li class="nav-item">
-                        <a class="nav-link " href="logout.html">Logout</a>
-                        </li>
-
-                     </ul>
-                  </div>
-               </nav>
-            </div>
-            <div class="container-fluid">
-               <div class="logo"><a href="home.php"><img src="images/logo.png" style="height:100% !important"></a></div>
-               <div class="menu_main">
-                  <ul>
-                     <li class="active"><a href="home.php">Home</a></li>
-                     <li><a href="about.php">About</a></li>
-                     <li><a href="explore.php">Explore</a></li>
-                     <li><a href="userbookings.php">My Bookings</a></li>
-                     <li><a href="contact.php">Contact us</a></li>
-                     <li><a href="profile.php">Profile</a></li>
-                     <li><a href="logout.php">Logout</a></li>
-
-
-                     <!-- <li><a href="login.html">Login</a></li> -->
-
-                  </ul>
-               </div>
-            </div>
-         </div>
-         <!-- banner section start -->
-         <div class="banner_section layout_padding">
-          
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <div class="container">
-                     <h3 class="banner_taital"><?php echo 'welcome '.$username;?></h3>
-                        <p class="banner_text">Discover the traveller within you.Kerala's largest database with unique package
-                           Book online and secure your travel plan</p>
-                        <div class="read_bt"><a href="packages.html">BOOK NOW!</a></div>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="container">
-                        <h1 class="banner_taital">Adventure</h1>
-                        <p class="banner_text">There are many variations of passages of Lorem Ipsum available, but the majority have sufferedThere are ma available, but the majority have suffered</p>
-                        <div class="read_bt"><a href="#">BOOK NOW!</a></div>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="container">
-                        <h1 class="banner_taital">Adventure</h1>
-                        <p class="banner_text">There are many variations of passages of Lorem Ipsum available, but the majority have sufferedThere are ma available, but the majority have suffered</p>
-                        <div class="read_bt"><a href="#">Get A Quote</a></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- banner section end -->
-      </div>
+  <?php include 'usernavbar.php';?>
       <?php
             include 'connect.php';
             $query="select * from packages";
