@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   </head>
   <body>
-      
+  <?php include 'adminnavbar.php';?>
 <div class="container">
  
  <h2 class="mb-4 mt-5">All bookings </h2>
