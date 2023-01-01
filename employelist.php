@@ -42,6 +42,13 @@ $username=$_SESSION['logged'];
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
+   <style>
+    h2
+    {
+      position: static !important;
+    }
+
+      </style>
    <body>
       <!-- header section start -->
       <div class="header_section">
