@@ -15,7 +15,9 @@
   <?php include 'adminnavbar.php';?>
 <div class="container">
  
- <h2 class="mb-4 mt-5">All bookings </h2>
+ <h2 class="mb-4 mt-5 text-white">All bookings </h2>
+ <a href="adminbookings.php">
+ <button class="btn btn-info  mb-3 ">   Pending Requests</button></a>
  <ul class="responsive-table">
  <li class="table-header">
          <div class="col col-2">Username</div>

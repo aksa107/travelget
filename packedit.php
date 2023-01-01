@@ -7,6 +7,7 @@ include 'connect.php';
 $id=$_GET['id'];
 $name=$_GET['name'];
 $query="select * from packages where pid='$id' && pname='$name'";
+echo $query;
 $res=mysqli_query($link,$query);
 if($row=mysqli_fetch_array($res))
 {
