@@ -66,7 +66,7 @@ body
 <?php include 'adminnavbar.php';?>
 <div class="container">
  
- <h2 class="mb-4 mt-5">Pending Request  </h2>
+ <h2 class="mb-4 mt-5 text-white">Pending Request  </h2>
  <ul class="responsive-table">
      <li class="table-header">
         <div class="col col-2">Username</div>

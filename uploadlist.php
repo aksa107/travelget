@@ -70,7 +70,7 @@ img {
             <div class="container p-3">
                <div>
 
-                  <h2  >Packages </h2>
+                  <h2  class="mb-4 mt-5 text-white">Packages </h2>
                </div>
   <ul class="responsive-table">
     <li class="table-header">
