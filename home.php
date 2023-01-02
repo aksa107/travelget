@@ -1,6 +1,8 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
 session_start();
 $username=$_SESSION['logged'];
+
 ?>
 
 
@@ -9,6 +11,12 @@ $username=$_SESSION['logged'];
 <!DOCTYPE html>
 <html lang="en">
    <head>
+   <style>
+         .services_img{
+            height: 350px!important;
+            width : 350px!important;
+         }
+      </style> 
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -106,7 +114,7 @@ $username=$_SESSION['logged'];
                      <h3 class="banner_taital"><?php echo 'welcome '.$username;?></h3>
                         <p class="banner_text">Discover the traveller within you.Kerala's largest database with unique package
                            Book online and secure your travel plan</p>
-                        <div class="read_bt"><a href="packages.html">BOOK NOW!</a></div>
+                        <div class="read_bt"><a href="package.php">BOOK NOW!</a></div>
                      </div>
                   </div>
                   <div class="carousel-item">
@@ -135,15 +143,23 @@ $username=$_SESSION['logged'];
             <h1 class="services_taital">Keep calm and visit Kerala</h1>
             <p class="services_text">“A state with lots of coconut trees and the greenery in totality is always soothing to the senses. As you will be approaching, you will be already excited for Kerala.”</p>
             <div class="services_section_2">
-               <div class="row">
-                  <div class="col-md-6">
-                     <div><img src="images/img-1.png" class="services_img"></div>
-                     <div class="btn_main"><a href="places.html">Places</a></div>
+            <div class="row ">
+                  <div class="col-md-6 ">
+                     <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div><img src="images/img-1.png" class="services_img" ></div>
+                        <div class="btn_main"><a href="Places.html">Places</a></div>
+                        
+                     </div>
                   </div>
+                
                   <div class="col-md-6">
+                     
+                  <div class="d-flex flex-column justify-content-center align-items-center">
+
                      <div><img src="images/img-3.png" class="services_img"></div>
                      <div class="btn_main"><a href="package.php">Packages</a></div>
                   </div>
+               </div>
                </div>
             </div>
          </div>
@@ -224,7 +240,11 @@ $username=$_SESSION['logged'];
          <div class="container">
             <h1 class="choose_taital">Why Choose Us</h1>
             <p class="choose_text">There are many reasons to choose this travel website, but some of the most popular reasons are The website offers a wide variety of tour packages and destinations. The website is easy to use and navigate.The website has a strong reputation and is trusted by many travelers.</p>
-            <div class="read_bt_1"><a href="packages.html">Book now</a></div>
+            <div class="read_bt_1"><a href="package.php">Book now</a></div>
+            <div class="newsletter_box">
+               <h1 class="let_text">Let Start Talk with Us</h1>
+               <div class="getquote_bt"><a href="contact.php">Get a call back</a></div>
+            </div>
          </div>
       </div>
       <!-- footer section start -->

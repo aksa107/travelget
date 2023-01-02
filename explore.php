@@ -38,8 +38,14 @@ $username=$_SESSION['logged'];
       <!-- owl stylesheets --> 
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
+      <style>
+         .services_img{
+            width: 350px!important;
+         }
+      </style>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
+
    <body>
       <!-- header section start -->
       <div class="header_section">
@@ -78,7 +84,8 @@ $username=$_SESSION['logged'];
                      <li class="active"><a href="home.php">Home</a></li>
                      <li><a href="about.php">About</a></li>
                      <li><a href="explore.php">Explore</a></li>
-                     <li><a href="contact.html">Contact us</a></li>
+                     <li><a href="userbookings.php">My Bookings</a></li>
+                     <li><a href="contact.php">Contact us</a></li>
                      <li><a href="profile.php">Profile</a></li>
                      <li><a href="logout.html">Logout</a></li>
                   </ul>
@@ -93,19 +100,23 @@ $username=$_SESSION['logged'];
             <h1 class="services_taital">Keep calm and visit Kerala</h1>
             <p class="services_text">“A state with lots of coconut trees and the greenery in totality is always soothing to the senses. As you will be approaching, you will be already excited for Kerala.”</p>
             <div class="services_section_2">
-               <div class="row">
-                  <div class="col-md-4">
-                     <div><img src="images/img-1.png" class="services_img"></div>
-                     <div class="btn_main"><a href="Places.php">Places</a></div>
+               <div class="row ">
+                  <div class="col-md-6 ">
+                     <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div><img src="images/img-1.png" class="services_img" ></div>
+                        <div class="btn_main"><a href="Places.html">Places</a></div>
+                        
+                     </div>
                   </div>
-                  <div class="col-md-4">
-                     <div><img src="images/img-2.png" class="services_img"></div>
-                     <div class="btn_main active"><a href="#">Hotels</a></div>
-                  </div>
-                  <div class="col-md-4">
+                
+                  <div class="col-md-6">
+                     
+                  <div class="d-flex flex-column justify-content-center align-items-center">
+
                      <div><img src="images/img-3.png" class="services_img"></div>
-                     <div class="btn_main"><a href="packages.php">Packages</a></div>
+                     <div class="btn_main"><a href="package.php">Packages</a></div>
                   </div>
+               </div>
                </div>
             </div>
          </div>

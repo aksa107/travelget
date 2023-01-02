@@ -3,6 +3,7 @@
 <head><?php
 session_start();
 $username=$_SESSION['logged'];
+// echo $username;
 include 'connect.php';
 $query="select * from admin where aname='$username'";
 $res=mysqli_query($link,$query);
@@ -28,7 +29,7 @@ if($row=mysqli_fetch_array($res))
     <link rel="stylesheet" href="css/lstyle.css">
 </head>
 <body></body>
-
+<?php include 'adminnavbar.php';?>
         <!-- Sign up form -->
         <section class="signup">
             <div class="container">

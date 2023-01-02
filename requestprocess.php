@@ -16,7 +16,7 @@ if($res)
 else
 {
     ?>
-     <script language="javascript">alert('Registration failed');window.location.replace('contac.php');</script>
+     <script language="javascript">alert('Registration failed');window.location.replace('contact.php');</script>
     <?php
 
 
