@@ -389,7 +389,7 @@ header.header-sm{
     transition: var(--trans);
     cursor: pointer;
 }
-.gallery-item::after{
+/* .gallery-item::after{
     content: "";
     z-index: 1;
     position: absolute;
@@ -400,18 +400,18 @@ header.header-sm{
     background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(18%, transparent), color-stop(99%, rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8)));
     background: -o-linear-gradient(top, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
     background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
-}
-.gallery-item img{
+} */
+.gallery-ite img{
     -webkit-transition: var(--trans);
     -o-transition: var(--trans);
     transition: var(--trans);
 }
-.gallery-item:hover img{
+.gallery-ite:hover img{
     -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
             transform: scale(1.2);
 }
-.zoom-icon{
+/* .zoom-icon{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -425,12 +425,12 @@ header.header-sm{
     -webkit-transition: var(--trans);
     -o-transition: var(--trans);
     transition: var(--trans);
-}
+} */
 .gallery-item:hover .zoom-icon{
     opacity: 1;
 }
 /* img modal box */
-#img-modal-box{
+/* #img-modal-box{
     position: fixed;
     top: 0;
     left: 0;
@@ -491,7 +491,7 @@ header.header-sm{
 #next-btn:hover, #prev-btn:hover{
     background-color: var(--dark);
     color: #fff;
-}
+} */
 
 /* popular section */
 #popular.py-4{
