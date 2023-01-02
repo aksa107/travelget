@@ -7,7 +7,7 @@ include 'connect.php';
 $id=$_GET['id'];
 $name=$_GET['name'];
 $query="select * from packages where pid='$id' && pname='$name'";
-echo $query;
+// echo $query;
 $res=mysqli_query($link,$query);
 if($row=mysqli_fetch_array($res))
 {
@@ -15,6 +15,8 @@ if($row=mysqli_fetch_array($res))
     $name=$row['pname'];
     $des=$row['pdes'];
     $rate=$row['prate'];
+    $details=$row['pdate'];
+    $luxury=$row['pluxury'];
     $image=$row['image'];
     $path="uploads/".$image;
 }
@@ -30,9 +32,18 @@ if($row=mysqli_fetch_array($res))
 
     <!-- Main css -->
     <link rel="stylesheet" href="css/lstyle.css">
+    <style>
+        label{
+            top: -24%!important;
+        }
+        .form-group{
+            overflow: initial;
+            margin-bottom:3rem !important;
+        }
+    </style>
 </head>
-<body></body>
-<?php ?>
+<body>
+<?php include 'adminnavbar.php';?>
         <!-- Sign up form -->
         <section class="signup">
             <div class="container">
@@ -42,23 +53,31 @@ if($row=mysqli_fetch_array($res))
                         <form method="POST" class="register" action="packeditprocess.php"  enctype="multipart/form-data">
                             <div class="form-group">
                             <input type="hidden" name="id" id="name"value="<?php echo$id;?>" >
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"> name</i></label>
                                 <input type="text" name="pname" id="pname" value="<?php echo $name;?>">
                             </div>
                             <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <label for="email"><i class="zmdi zmdi-email"></i> description</label>
                                 <input type="text" name="description" id="description" value="<?php echo $des;?>">
                             </div>
                             <div class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <label for="email"><i class="zmdi zmdi-email"></i> Details</label>
+                                <input type="text" name="details" id="details" value="<?php echo $details;?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i> ecnomy</label>
                                 <input type="text" name="rate" id="rate" value="<?php echo $rate;?>">
                             </div>
                             <div class="form-group">
-                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <label for="pass"><i class="zmdi zmdi-lock"></i> luxury</label>
+                                <input type="text" name="luxury" id="luxury" value="<?php echo $luxury;?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i> image</label>
                                 <input type="file" name="image" id="image">
                             </div>
                             <div class="form-group">
-                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i> pdf</label>
                                 <input type="file" name="pdf" id="pdf">
                             </div>
                            
