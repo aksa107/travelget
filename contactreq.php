@@ -70,15 +70,17 @@ $username=$_SESSION['logged'];
                <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
                <div class="menu_main">
                <ul>
-                     <li class="active"><a href="adminhome.php">Home</a></li>
+               <li class="active"><a href="adminhome.php">Home</a></li>
                      <li><a href="image.php">packages</a></li>
-                     <li><a href="explore.php">Explore</a></li>
+                     <li><a href="adminexplore.php">Explore</a></li>
                      
                      <li><a href="employelist.php">Customers</a></li>
-                     <li><a href="adminbookings.php">Pending Requests</a></li>
+                     <li><a href="contactreq.php"> Requests</a></li>
                      <li><a href="allbookings.php">All Requests</a></li>
                      <li><a href="adminprofile.php">Profile</a></li>
                      <li><a href="logout.php">Logout</a></li>
+
+
 
 
                      <!-- <li><a href="login.html">Login</a></li> -->

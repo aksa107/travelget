@@ -114,7 +114,7 @@ $username=$_SESSION['logged'];
                      <h3 class="banner_taital"><?php echo 'welcome '.$username;?></h3>
                         <p class="banner_text">Discover the traveller within you.Kerala's largest database with unique package
                            Book online and secure your travel plan</p>
-                        <div class="read_bt"><a href="packages.html">BOOK NOW!</a></div>
+                        <div class="read_bt"><a href="package.php">BOOK NOW!</a></div>
                      </div>
                   </div>
                   <div class="carousel-item">
@@ -240,7 +240,11 @@ $username=$_SESSION['logged'];
          <div class="container">
             <h1 class="choose_taital">Why Choose Us</h1>
             <p class="choose_text">There are many reasons to choose this travel website, but some of the most popular reasons are The website offers a wide variety of tour packages and destinations. The website is easy to use and navigate.The website has a strong reputation and is trusted by many travelers.</p>
-            <div class="read_bt_1"><a href="packages.html">Book now</a></div>
+            <div class="read_bt_1"><a href="package.php">Book now</a></div>
+            <div class="newsletter_box">
+               <h1 class="let_text">Let Start Talk with Us</h1>
+               <div class="getquote_bt"><a href="contact.php">Get a call back</a></div>
+            </div>
          </div>
       </div>
       <!-- footer section start -->
