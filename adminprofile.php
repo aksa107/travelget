@@ -47,7 +47,7 @@ if($row=mysqli_fetch_array($res))
                             </div>
                             <div class="form-group">
                                 <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="aphone" id="pass" value="<?php echo $phone;?>">
+                                <input type="tel" name="aphone" id="pass" value="<?php echo $phone;?>">
                             </div>
                             <div class="form-group">
                                 <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>

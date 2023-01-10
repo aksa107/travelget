@@ -30,7 +30,7 @@ if($row=mysqli_fetch_array($res))
     <!-- Main css -->
     <link rel="stylesheet" href="css/lstyle.css">
 </head>
-<body></body>
+<body><?php include 'usernavbar.php';?></body>
 
         <!-- Sign up form -->
         <section class="signup">

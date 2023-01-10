@@ -1,12 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<script language="javascript">alert('booking success');window.location.replace('userbookings.php')</script>
-</body>
-</html>
+<?php
+
+
+include 'connect.php';
+$a=$_POST['cnumber'];
+$b=$_POST['cname'];
+$c=$_POST['cdate'];
+$d=$_POST['cvv'];
+include 'connect.php';
+$query="Insert into payment(cnumber,cname,cdate,cvv) values('$a','$b','$c','$d')";
+$res=mysqli_query($link,$query);
+if($res)
+{
+    ?>
+    <script language="javascript">alert('Payment success');window.location.replace('userbooking.php');</script>
+    <?php
+}
+
+else
+{
+    ?>
+     <script language="javascript">alert('Payment failed');window.location.replace('package.php');</script>
+    <?php
+}
+?>
+
+
+ 
