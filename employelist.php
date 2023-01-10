@@ -35,10 +35,20 @@ $username=$_SESSION['logged'];
       <!-- fonts -->
       <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Righteous&display=swap" rel="stylesheet">
       <!-- owl stylesheets --> 
+      
+    <link rel="stylesheet" href="css/packagestyle.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    </head>
+   <style>
+    h2
+    {
+      position: static !important;
+    }
+
+      </style>
    <body>
       <!-- header section start -->
       <div class="header_section">
@@ -59,13 +69,20 @@ $username=$_SESSION['logged'];
             <div class="container-fluid">
                <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
                <div class="menu_main">
-                  <ul>
+               <ul>
                      <li class="active"><a href="adminhome.php">Home</a></li>
-                     <li><a href="about.php">About</a></li>
+                     <li><a href="image.php">packages</a></li>
                      <li><a href="explore.php">Explore</a></li>
-                     <li><a href="contact.html">Contact us</a></li>
-                     <li><a href="profile.php">Profile</a></li>
-                     <li><a href="logout.html">Logout</a></li>
+                     
+                     <li><a href="employelist.php">Customers</a></li>
+                     <li><a href="adminbookings.php">Pending Requests</a></li>
+                     <li><a href="allbookings.php">All Requests</a></li>
+                     <li><a href="adminprofile.php">Profile</a></li>
+                     <li><a href="logout.php">Logout</a></li>
+
+
+                     <!-- <li><a href="login.html">Login</a></li> -->
+
                   </ul>
                </div>
             </div>
@@ -74,20 +91,22 @@ $username=$_SESSION['logged'];
 
 <div class="container">
 
-<h2>Tourist List</h2>
-<table border="4px" width="70">
-
-<tr>
-
-<td>Name</td>
-<td>Email</td>
-<td>Phone</td>
-<td>Password</td>
-
-</tr>
-
-
-
+<h2 class="mb-4 mt-5">Tourist List</h2>
+<ul class="responsive-table">
+     <li class="table-header">
+        <div class="col col-2">name</div>
+       <div class="col col-2">Email</div>
+       <div class="col col-2">Phone</div>
+     
+     
+       <div class="col col-2">Action</div>
+     </li>
+ 
+ 
+ 
+  
+ 
+  
 <?php
 include 'connect.php';
 $query="select * from signup";
@@ -101,25 +120,15 @@ $phone=$row['phone'];
 $password=$row['password'];
 ?>
 
-<tr>
-  <td><?php echo $fname;?></td>
-  <td><?php echo $email;?></td>
-<td><?php echo $phone;?></td>
-<td><?php echo $password;?></td>
-
-  <td><a href="deleteprocess.php?name=<?php echo $fname;?>">Delete</a>
-</tr>
-
-
-<?php
-
-}
-
-
-?>
-
-</table>    
-
+ <li class="table-row p-3">
+ <div class="col col-2" name=""><?php echo $fname;?></div>
+ <div class="col col-2" name="Customer Name"><?php echo $email;?></div>
+ <div class="col col-2" name="Amount"><?php echo $phone ?></div>
+ <div class="col col-2" name="cancel"><button class="btn btn-danger"><a href="deleteprocess.php?name=<?php echo $fname;?>" class="text-white ">Delete</a></button></div>
+ </li>
+ 
+ <?php }?>
+  
 
 </div>
 <div class="footer_section layout_padding">

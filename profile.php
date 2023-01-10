@@ -30,7 +30,7 @@ if($row=mysqli_fetch_array($res))
     <!-- Main css -->
     <link rel="stylesheet" href="css/lstyle.css">
 </head>
-<body></body>
+<body><?php include 'usernavbar.php';?></body>
 
         <!-- Sign up form -->
         <section class="signup">
@@ -41,19 +41,19 @@ if($row=mysqli_fetch_array($res))
                         <form method="POST" class="register" action="updateprocess.php" >
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="name" id="name" value="<?php echo $username;?>">
+                                <input type="text" name="name" id="name" value="<?php echo $username;?>" pattern="[A-Za-z]{3,}" required>
                             </div>
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="text" name="email" id="email" value="<?php echo $email;?>">
+                                <input type="text" name="email" id="email" value="<?php echo $email;?>" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                             </div>
                             <div class="form-group">
                                 <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="phone" id="pass" value="<?php echo $phone;?>">
+                                <input type="text" name="phone" id="pass" value="<?php echo $phone;?>" pattern="[789][0-9]{9}" required>
                             </div>
                             <div class="form-group">
                                 <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
-                                <input type="text" name="password" id="re_pass" value="<?php echo $password;?>">
+                                <input type="text" name="password" id="re_pass" value="<?php echo $password;?>" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                             </div>
                            
                             <div class="form-group form-button">

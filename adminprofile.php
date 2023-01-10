@@ -3,6 +3,7 @@
 <head><?php
 session_start();
 $username=$_SESSION['logged'];
+// echo $username;
 include 'connect.php';
 $query="select * from admin where aname='$username'";
 $res=mysqli_query($link,$query);
@@ -28,7 +29,7 @@ if($row=mysqli_fetch_array($res))
     <link rel="stylesheet" href="css/lstyle.css">
 </head>
 <body></body>
-
+<?php include 'adminnavbar.php';?>
         <!-- Sign up form -->
         <section class="signup">
             <div class="container">
@@ -46,7 +47,7 @@ if($row=mysqli_fetch_array($res))
                             </div>
                             <div class="form-group">
                                 <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="text" name="aphone" id="pass" value="<?php echo $phone;?>">
+                                <input type="tel" name="aphone" id="pass" value="<?php echo $phone;?>">
                             </div>
                             <div class="form-group">
                                 <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>

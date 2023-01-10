@@ -6,6 +6,12 @@ $username=$_SESSION['logged'];
 <!DOCTYPE html>
 <html lang="en">
    <head>
+   <style>
+         .services_img{
+            height: 350px!important;
+            width : 350px!important;
+         }
+      </style> 
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,12 +85,12 @@ $username=$_SESSION['logged'];
                <div class="logo"><a href="home.php"><img src="images/logo.png"></a></div>
                <div class="menu_main">
                   <ul>
-                     <li class="active"><a href="home.php">Home</a></li>
+                     <li class="active"><a href="adminhome.php">Home</a></li>
                      <li><a href="image.php">packages</a></li>
-                     <li><a href="explore.php">Explore</a></li>
+                     <li><a href="adminexplore.php">Explore</a></li>
                      
                      <li><a href="employelist.php">Customers</a></li>
-                     <li><a href="adminbookings.php">Pending Requests</a></li>
+                     <li><a href="contactreq.php"> Requests</a></li>
                      <li><a href="allbookings.php">All Requests</a></li>
                      <li><a href="adminprofile.php">Profile</a></li>
                      <li><a href="logout.php">Logout</a></li>
@@ -105,7 +111,7 @@ $username=$_SESSION['logged'];
                      <h3 class="banner_taital"><?php echo 'welcome '.$username;?></h3>
                         <p class="banner_text">Discover the traveller within you.Kerala's largest database with unique package
                            Book online and secure your travel plan</p>
-                        <div class="read_bt"><a href="#">BOOK NOW!</a></div>
+                        <div class="read_bt"><a href="package.php">BOOK NOW!</a></div>
                      </div>
                   </div>
                   <div class="carousel-item">
@@ -134,19 +140,23 @@ $username=$_SESSION['logged'];
             <h1 class="services_taital">Keep calm and visit Kerala</h1>
             <p class="services_text">“A state with lots of coconut trees and the greenery in totality is always soothing to the senses. As you will be approaching, you will be already excited for Kerala.”</p>
             <div class="services_section_2">
-               <div class="row">
-                  <div class="col-md-4">
-                     <div><img src="images/img-1.png" class="services_img"></div>
-                     <div class="btn_main"><a href="#">Places</a></div>
+            <div class="row ">
+                  <div class="col-md-6 ">
+                     <div class="d-flex flex-column justify-content-center align-items-center">
+                        <div><img src="images/img-1.png" class="services_img" ></div>
+                        <div class="btn_main"><a href="Places.html">Places</a></div>
+                        
+                     </div>
                   </div>
-                  <div class="col-md-4">
-                     <div><img src="images/img-2.png" class="services_img"></div>
-                     <div class="btn_main active"><a href="#">Hotels</a></div>
-                  </div>
-                  <div class="col-md-4">
+                
+                  <div class="col-md-6">
+                     
+                  <div class="d-flex flex-column justify-content-center align-items-center">
+
                      <div><img src="images/img-3.png" class="services_img"></div>
-                     <div class="btn_main"><a href="#">Packages</a></div>
+                     <div class="btn_main"><a href="package.php">Packages</a></div>
                   </div>
+               </div>
                </div>
             </div>
          </div>
@@ -173,28 +183,27 @@ $username=$_SESSION['logged'];
       <!-- client section start -->
       <div class="client_section layout_padding">
          <div class="container">
-            <h1 class="client_taital">Testimonial</h1>
+            <h1 class="client_taital">Meet the Team</h1>
             <div class="client_section_2">
                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators">
                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                   </ol>
                   <div class="carousel-inner">
                      <div class="carousel-item active">
                         <div class="client_main">
                            <div class="box_left">
-                              <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
+                              <p class="lorem_text">Hi, my name is Fayaz i am 20 years old college student I am an experienced traveler who enjoys visiting new places and learning about new cultures. I am a good planner and enjoy researching my travel destinations in advance. I am also a flexible traveler who is open to new experiences and willing to try new things.</p>
                            </div>
                            <div class="box_right">
                               <div class="client_taital_left">
-                                 <div class="client_img"><img src="images/client-img.png"></div>
+                                 <div ><img style="border-radius: 110px;" src="images/fayas.png"></div>
                                  <div class="quick_icon"><img src="images/quick-icon.png"></div>
                               </div>
                               <div class="client_taital_right">
-                                 <h4 class="client_name">Dame</h4>
-                                 <p class="customer_text">Customer</p>
+                              <div></div> <h4 class="client_name">Fayas</h4>
+                                 <p class="customer_text">Founder</p>
                               </div>
                            </div>
                         </div>
@@ -202,35 +211,20 @@ $username=$_SESSION['logged'];
                      <div class="carousel-item">
                         <div class="client_main">
                            <div class="box_left">
-                              <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
+                              <p class="lorem_text">Hello, my name is Aksa, and I'm  20-year-old college student who loves to travel and discover new places and cultures. I like to explore my travel places in advance because I am an excellent planner. I am a flexible traveller who enjoys trying new things and is open to new experiences.</p>
                            </div>
                            <div class="box_right">
                               <div class="client_taital_left">
-                                 <div class="client_img"><img src="images/client-img.png"></div>
+                                 <div class="client_img"><img  style="border-radius: 110px;" src="images/aksa.png"></div>
                                  <div class="quick_icon"><img src="images/quick-icon.png"></div>
                               </div>
                               <div class="client_taital_right">
-                                 <h4 class="client_name">Dame</h4>
-                                 <p class="customer_text">Customer</p>
+                                 <h4 class="client_name">Aksa</h4>
+                                 <p class="customer_text">Co-Founder</Co-Founder></p>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="carousel-item">
-                        <div class="client_main">
-                           <div class="box_left">
-                              <p class="lorem_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugia</p>
-                           </div>
-                           <div class="box_right">
-                              <div class="client_taital_left">
-                                 <div class="client_img"><img src="images/client-img.png"></div>
-                                 <div class="quick_icon"><img src="images/quick-icon.png"></div>
-                              </div>
-                              <div class="client_taital_right">
-                                 <h4 class="client_name">Dame</h4>
-                                 <p class="customer_text">Customer</p>
-                              </div>
-                           </div>
                         </div>
                      </div>
                   </div>
