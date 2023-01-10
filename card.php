@@ -1,4 +1,7 @@
+
 <!DOCTYPE html>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,21 +39,22 @@ Payment card number: (4) VISA, (51 -> 55) MasterCard, (36-38-39) DinersClub, (34
     </div>
   </div>
   <div class="col2">
-    <form action="sucess.php" method="get">
+    <form action="sucess.php" method="POST">
     <label>Card Number</label>
-    <input required class="number" type="text" ng-model="ncard" maxlength="19" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+    <input required class="number" type="text" name="cnumber" ng-model="ncard" maxlength="19" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
     <label>Cardholder name</label>
-    <input required class="inputname" type="text" placeholder=""/>
+    <input required class="inputname" type="text" name="cname" placeholder=""/>
     <label>Expiry date</label>
-    <input required class="expire" type="text" placeholder="MM / YYYY"/>
+    <input required class="expire" type="text" name="cdate" placeholder="MM / YYYY"/>
     <label>Security Number</label>
-    <input required class="ccv" type="text" placeholder="CVC" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
+    <input required class="ccv" type="text" name="cvv" placeholder="CVC" maxlength="3" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
     <input type="submit" class="bg-info p-1" id="price" value="" > <i class="material-icons"> <span ></span> </input>  </form>
   </div>
 </div>
 </body>
 <script>
         var total = localStorage.getItem("totalprice");
+        document.cookie = "js_var_value = " +  localStorage.getItem("totalprice");
         console.log(' document.getElementById("price"): ',  document.getElementById("price"));
         document.getElementById("price").value= `Rs ${total}/-`
     </script>
