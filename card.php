@@ -1,4 +1,7 @@
+
 <!DOCTYPE html>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,7 +39,7 @@ Payment card number: (4) VISA, (51 -> 55) MasterCard, (36-38-39) DinersClub, (34
     </div>
   </div>
   <div class="col2">
-    <form action="sucess.php" method="get">
+    <form action="sucess.php" method="POST">
     <label>Card Number</label>
     <input required class="number" type="text" name="cnumber" ng-model="ncard" maxlength="19" onkeypress='return event.charCode >= 48 && event.charCode <= 57'/>
     <label>Cardholder name</label>
@@ -51,6 +54,7 @@ Payment card number: (4) VISA, (51 -> 55) MasterCard, (36-38-39) DinersClub, (34
 </body>
 <script>
         var total = localStorage.getItem("totalprice");
+        document.cookie = "js_var_value = " +  localStorage.getItem("totalprice");
         console.log(' document.getElementById("price"): ',  document.getElementById("price"));
         document.getElementById("price").value= `Rs ${total}/-`
     </script>
