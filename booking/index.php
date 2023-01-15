@@ -76,18 +76,20 @@ $luxury=$row[2];
                                     <input type="text" name="package" readonly id="package" value="<?php echo $package?>" />
                                 </div>
                                 <div class="form-input">
-                                    <label for="phone_number" class="required">Phone number</label>
-                                    <input type="text" name="phone_number" id="phone_number" />
+                                    <label for="phone_number" class="required" required  >Phone number</label>
+                                    <input type="text" name="phone_number" id="phone_number" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required />
+                                    <label for="validation" id="validation"></label>
+                                    
                                 </div>
                            
                                 <div class="form-input">
-                                    <label for="address" class="required">address</label>
+                                    <label for="address" class="required" required >address</label>
                                     <textarea class="form-control " name="address" id="address" cols="10" rows="5"></textarea>
                                     
                                 </div>
                                
                                 <div class="form-input">
-                                    <label for="date" class="required">date </label>
+                                    <label for="date" class="required" required >date </label>
 <input type="date" required name="date" id="date" min="<?php echo $date ;?>">                                    
                                 </div>
                                 <div class="form-radio">
@@ -99,7 +101,7 @@ $luxury=$row[2];
                                     </div>
                                     <div class="form-radio-group" >            
                                         <div class="form-radio-item" >
-                                            <input type="radio" name="radio" id="ecnomy" onchange="addgender()" value="ecnomy" >
+                                            <input type="radio" name="radio" id="ecnomy"  checked onchange="addgender()" value="ecnomy" >
                                             <label for="ecnomy">ecnomy</label>
                                             <span class="check"></span>
                                         </div>
@@ -125,26 +127,26 @@ $luxury=$row[2];
                              
                                 <div class="form-input">
                                     <label for="email" class="required">Email</label>
-                                    <input type="text" name="email" id="email" />
+                                    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  name="email" id="email" required />
                                 </div>
                                 <div class="form-input">
                                     <label for="blank_name">Number of passengers</label>
                                     <div class="d-flex">
                                         <label for="men" class="fw-normal">men</label>
 
-                                        <input type="number" name="men" id="men" value="0" onchange="addgender()" min="0" max="100">
+                                        <input type="number" name="men" id="men" value="1" onchange="addgender()" required min="0" max="100">
                                     </div>
                                     <div class="d-flex">
                                         <label for="men" class="fw-normal mt-3">women</label>
 
-                                        <input type="number" class="mt-3" name="women" value="0" onchange="addgender()"  id="women"  min="0" max="100">
+                                        <input type="number" class="mt-3" name="women" value="1" onchange="addgender()" required id="women"  min="0" max="100">
                                     </div>
                                 </div>
                          
                                 <div class="form-input">
                                     <label for="additional" >additional</label>
                                     <textarea class="form-control " name="additional" id="additional" cols="10" rows="5"></textarea>
-                                    
+                                
                                 </div>
                        
                         
@@ -164,7 +166,7 @@ $luxury=$row[2];
 
     <!-- JS -->
     <script>
-  
+
 addgender=()=>{
    
                 selected_value = $("input[name='radio']:checked").val();
@@ -211,6 +213,7 @@ if( selected_value=="ecnomy"){
 }
 function mode(){
 }
+
 
     </script>
     <script src="vendor/jquery/jquery.min.js"></script>
