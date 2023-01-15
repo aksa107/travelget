@@ -1,12 +1,12 @@
 <?php
 session_start();
 include 'connect.php';
-$name=$_GET['name'];
-// $query="delete from signup where name='$name'";
+$id=$_GET['id'];
+$query="delete from payment where id='$id'";
 // $querys="delete from bookings where username='$name'";
-$query= "DELETE signup, bookings FROM signup
-JOIN bookings ON signup.name = bookings.username
-WHERE signup.name = '$name'";
+// $query= "DELETE signup, bookings FROM signup
+// JOIN bookings ON signup.name = bookings.username
+// WHERE signup.name = '$name'";
 // mysqli_query($link,$querys);
 $res=mysqli_query($link,$query);
 if($res)

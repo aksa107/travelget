@@ -1,6 +1,6 @@
 <?php
 
-
+session_start();
 include 'connect.php';?><script>
  
 //    console.log('res: ', res);
@@ -13,8 +13,11 @@ $a=$_POST['cnumber'];
 $b=$_POST['cname'];
 $c=$_POST['cdate'];
 $d=$_POST['cvv'];
+$user=$_SESSION['logged'];
+;
 // $phpVar=echo $phpVar;
-$query="Insert into payment(cnumber,cname,cdate,cvv,amount) values('$a','$b','$c','$d',' $php_var_val')";
+$query="Insert into payment(customer,cnumber,cname,cdate,cvv,amount) values('$user','$a','$b','$c','$d',' $php_var_val')";
+echo $query;
 $res=mysqli_query($link,$query);
 if($res)
 {

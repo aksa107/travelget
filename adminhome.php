@@ -91,6 +91,7 @@ $username=$_SESSION['logged'];
                      
                      <li><a href="employelist.php">Customers</a></li>
                      <li><a href="contactreq.php"> Requests</a></li>
+                     <li><a href="paymentview.php"> Payments</a></li>
                      <li><a href="allbookings.php">All Requests</a></li>
                      <li><a href="adminprofile.php">Profile</a></li>
                      <li><a href="logout.php">Logout</a></li>
