@@ -16,7 +16,7 @@ if($res)
 else
 {
     ?>
-     <script language="javascript">alert('Registration failed');window.location.replace('signup.html');</script>
+     <script language="javascript">alert('Duplicate entry please try again');window.location.replace('signup.html');</script>
     <?php
 
 
